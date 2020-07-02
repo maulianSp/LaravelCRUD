@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pertanyaan', 'PertanyaanController@index')->name('pertanyaan');
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+
+Route::get('/jawaban/{id}', 'JawabanController@index')->name('jawaban');
+Route::post('/jawaban', 'JawabanController@store');
