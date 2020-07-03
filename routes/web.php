@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pertanyaan', 'PertanyaanController@index')->name('pertanyaan');
-Route::get('/pertanyaan/create', 'PertanyaanController@create');
-Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan', 'QuestionController@index')->name('question');
+Route::get('/pertanyaan/create', 'QuestionController@create');
+Route::post('/pertanyaan', 'QuestionController@store');
+Route::get('/pertanyaan/{id}', 'QuestionController@show')->name('show');
+Route::get('/pertanyaan/{id}/edit', 'QuestionController@edit');
+Route::put('/pertanyaan/{id}', 'QuestionController@update');
+Route::delete('/pertanyaan/{id}', 'QuestionController@destroy');
 
-Route::get('/jawaban/{id}', 'JawabanController@index')->name('jawaban');
-Route::post('/jawaban', 'JawabanController@store');
+//Route::get('/jawaban/{id}', 'AnswerController@index')->name('jawaban');
+Route::post('/jawaban', 'AnswerController@store');

@@ -5,7 +5,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('pertanyaan')}}" class="nav-link @yield('menuPertanyaan')">Pertanyaan</a>
+        <a href="{{route('question')}}" class="nav-link @yield('menuPertanyaan')">Pertanyaan</a>
     </li>
     {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="{{route('jawaban')}}" class="nav-link @yield('menuJawaban')">Jawaban</a>
